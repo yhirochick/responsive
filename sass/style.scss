@@ -5,6 +5,7 @@
 $color-base: #9409c7;
 $color-sub: #999999;
 $sp: "only screen and(max-width:480px)";
+$headerLimit: "only screen and(max-width:840px)";
 
 body {
   font-family: "Century_Gothic";
@@ -28,7 +29,7 @@ img {
   background-color: $color-base;
   display: flex;
   align-items: center;
-  @media #{$sp} {
+  @media #{$headerLimit} {
     height: 50px;
     width: 100%;
     position: fixed;
@@ -39,7 +40,7 @@ img {
     height: 100%;
     display: flex;
     justify-content: space-between;
-    @media #{$sp} {
+    @media #{$headerLimit} {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -52,7 +53,7 @@ img {
     &:hover {
       opacity: 0.2;
     }
-    @media #{$sp} {
+    @media #{$headerLimit} {
       margin: auto;
       padding-left: 30px;
       position: fixed;
@@ -68,7 +69,7 @@ img {
     height: 100%;
     display: flex;
     justify-content: center;
-    @media #{$sp} {
+    @media #{$headerLimit} {
       position: fixed;
       top: 0;
       left: 0;
@@ -92,7 +93,7 @@ img {
       z-index: 10000;
       transition: all 0.3s ease-in-out;
       display: none;
-      @media #{$sp} {
+      @media #{$headerLimit} {
         display: block;
       }
       span {
@@ -158,7 +159,7 @@ img {
     display: flex;
     align-items: center;
     font-size: 12px;
-    @media #{$sp} {
+    @media #{$headerLimit} {
       width: 100%;
       flex-direction: column;
       font-size: 20px;
@@ -174,7 +175,7 @@ img {
       white-space: pre;
       list-style: none;
       padding: 0 0 0 20px;
-      @media #{$sp} {
+      @media #{$headerLimit} {
         height: 100%;
         width: 100%;
         padding: 40px 20px;
@@ -194,7 +195,7 @@ img {
         color: #111;
         background: #fff;
       }
-      @media #{$sp} {
+      @media #{$headerLimit} {
         width: 100%;
         height: 100%;
         display: flex;
@@ -212,7 +213,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  @media #{$sp} {
+  @media #{$headerLimit} {
     display: none;
   }
 
@@ -246,7 +247,8 @@ img {
     height: 100%;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.2);
-    transition: filter 3.0s ease;
+    -webkit-transition: all 1.0s ease;
+    transition: all 1.0s ease;
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -257,6 +259,12 @@ img {
     &:hover {
       background-color: rgba(0, 0, 0, 0.6);
     }
+    &:hover .description{
+      display: block;
+    }
+  }
+  .description {
+    display: none;
   }
   h2 {
     padding-left: 10vw;
@@ -358,219 +366,6 @@ img {
     }
   }
 
-}
-
-
-
-.Top {
-  height: 100vh;
-  display: flex;
-  @media #{$sp} {
-    width: 100vw;
-    height: auto;
-    flex-direction: column;
-    padding-top: 50px;
-  }
-  &__Left {
-    width: 100%;
-    @media #{$sp} {
-      width: 100%;
-    }
-    h2 {
-      font-weight: 500;
-      letter-spacing: 3px;
-      margin: 0;
-      padding-bottom: 15px;
-    }
-  }
-
-  &__Right {
-    width: 40%;
-    @media #{$sp} {
-      width: 100%;
-    }
-  }
-
-  &__Item {
-    height: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    @media #{$sp} {
-      width: 100%;
-    }
-
-    h2 {
-      padding-left: 10vw;
-      @media #{$sp} {
-        font-size: 18px;
-      }
-    }
-
-    p {
-      padding-left: 10vw;
-      @media #{$sp} {
-        font-size: 14px;
-      }
-    }
-
-    a {
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-    }
-
-    &--Campaign {
-      background-image: url("../img/campaign_visual.jpg");
-      color: #fff;
-      @media #{$sp} {
-        height: 200px;
-      }
-
-      a {
-        width: 100%;
-        height: 100%;
-        color: #fff;
-        background-color: rgba(0, 0, 0, 0.2);
-        transition: filter 0.3s ease;
-
-        &:hover {
-          background-color: rgba(0, 0, 0, 0.5);
-        }
-      }
-    }
-
-    &--Collection {
-      background-image: url("../img/collection_viisual.jpg");
-      color: #fff;
-      @media #{$sp} {
-        height: 200px;
-      }
-
-      a {
-        width: 100%;
-        height: 100%;
-        color: #fff;
-        background-color: rgba(0, 0, 0, 0.2);
-
-        &:hover {
-          background-color: rgba(0, 0, 0, 0.5);
-        }
-      }
-    }
-
-    &--NT {
-      height: calc(100% / 3);
-      background-image: url("../img/topic_visual.jpg");
-      color: #fff;
-      @media #{$sp} {
-        height: 160px;
-      }
-
-      a {
-        width: 100%;
-        height: 100%;
-        color: #fff;
-        background-color: rgba(0, 0, 0, 0.2);
-
-        &:hover {
-          background-color: rgba(0, 0, 0, 0.5);
-        }
-      }
-
-      h2 {
-        font-weight: 500;
-        letter-spacing: 3px;
-        margin: 0;
-        padding-bottom: 15px;
-      }
-    }
-
-    &--Snap {
-      height: calc(100% / 3);
-      background-color: #fff;
-      background-image: url("../img/snap_cover.jpg");
-      color: #444444;
-      @media #{$sp} {
-        z-index: -1;
-        height: 160px;
-      }
-
-      a {
-        width: 100%;
-        height: 100%;
-        color: #444444;
-
-        &:hover {
-          background-color: rgba(0, 0, 0, 0.5);
-        }
-      }
-
-      h2 {
-        font-weight: 500;
-        letter-spacing: 3px;
-        margin: 0;
-        padding-bottom: 15px;
-      }
-    }
-
-    &--News {
-      height: calc(100% / 6);
-      background-color: #eeeeee;
-      @media #{$sp} {
-        height: 120px;
-      }
-
-      a {
-        width: 100%;
-        height: 100%;
-        color: #444444;
-      }
-
-      p {
-        font-size: 13px;
-      }
-    }
-
-    &--WS {
-      height: calc(100% / 6);
-      background-color: #444444;
-      color: #fff;
-      @media #{$sp} {
-        height: 120px;
-      }
-
-      a {
-        width: 100%;
-        height: 100%;
-        color: #fff;
-      }
-
-      p {
-        font-size: 13px;
-      }
-    }
-
-    &--Title {
-      font-size: 17px;
-      font-weight: 500;
-      letter-spacing: 1.5px;
-      margin: 0;
-      padding-bottom: 15px;
-    }
-
-    &--Line {
-      border-top: 1px solid;
-      width: 200px;
-      margin: 15px 0;
-    }
-  }
-
-  p {
-    margin: 0;
-  }
 }
 
 .Footer {

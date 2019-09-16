@@ -20,7 +20,7 @@ img {
   background-color: #9409c7;
   display: flex;
   align-items: center; }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 840px) {
     .Global {
       height: 50px;
       width: 100%;
@@ -30,7 +30,7 @@ img {
     height: 100%;
     display: flex;
     justify-content: space-between; }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 840px) {
       .Global__Header {
         display: flex;
         justify-content: center;
@@ -40,7 +40,7 @@ img {
     margin: auto 30px; }
     .Global__Logo:hover {
       opacity: 0.2; }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 840px) {
       .Global__Logo {
         margin: auto;
         padding-left: 30px;
@@ -52,7 +52,7 @@ img {
     height: 100%;
     display: flex;
     justify-content: center; }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 840px) {
       .Global__Navigation {
         position: fixed;
         top: 0;
@@ -75,7 +75,7 @@ img {
       z-index: 10000;
       transition: all 0.3s ease-in-out;
       display: none; }
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-width: 840px) {
         .Global__Navigation--Toggle {
           display: block; } }
       .Global__Navigation--Toggle span {
@@ -130,7 +130,7 @@ img {
     display: flex;
     align-items: center;
     font-size: 12px; }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 840px) {
       .Global__NavigationItems, .Footer__Navigation {
         width: 100%;
         flex-direction: column;
@@ -145,7 +145,7 @@ img {
       white-space: pre;
       list-style: none;
       padding: 0 0 0 20px; }
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-width: 840px) {
         .Global__NavigationItems--Menu, .Footer__Navigation--Menu {
           height: 100%;
           width: 100%;
@@ -162,7 +162,7 @@ img {
         align-items: center;
         color: #111;
         background: #fff; }
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-width: 840px) {
         .Global__NavigationItems--Link, .Footer__Navigation--Link {
           width: 100%;
           height: 100%;
@@ -177,7 +177,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: flex-end; }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 840px) {
     .SnsIcon {
       display: none; } }
   .SnsIcon .fa {
@@ -201,9 +201,7 @@ img {
   height: 100%;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: -webkit-filter 3.0s ease;
-  transition: filter 3.0s ease;
-  transition: filter 3.0s ease, -webkit-filter 3.0s ease;
+  transition: all 1.0s ease;
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -211,6 +209,11 @@ img {
   align-items: flex-start; }
   .Characters a:hover {
     background-color: rgba(0, 0, 0, 0.6); }
+  .Characters a:hover .description {
+    display: block; }
+
+.Characters .description {
+  display: none; }
 
 .Characters h2 {
   padding-left: 10vw; }
@@ -292,160 +295,6 @@ img {
   .Characters__BerryBadGuy__Don {
     width: 50%;
     background-image: url("../img/don.jpg"); }
-
-.Top {
-  height: 100vh;
-  display: flex; }
-  @media only screen and (max-width: 480px) {
-    .Top {
-      width: 100vw;
-      height: auto;
-      flex-direction: column;
-      padding-top: 50px; } }
-  .Top__Left {
-    width: 100%; }
-    @media only screen and (max-width: 480px) {
-      .Top__Left {
-        width: 100%; } }
-    .Top__Left h2 {
-      font-weight: 500;
-      letter-spacing: 3px;
-      margin: 0;
-      padding-bottom: 15px; }
-  .Top__Right {
-    width: 40%; }
-    @media only screen and (max-width: 480px) {
-      .Top__Right {
-        width: 100%; } }
-  .Top__Item {
-    height: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; }
-    @media only screen and (max-width: 480px) {
-      .Top__Item {
-        width: 100%; } }
-    .Top__Item h2 {
-      padding-left: 10vw; }
-      @media only screen and (max-width: 480px) {
-        .Top__Item h2 {
-          font-size: 18px; } }
-    .Top__Item p {
-      padding-left: 10vw; }
-      @media only screen and (max-width: 480px) {
-        .Top__Item p {
-          font-size: 14px; } }
-    .Top__Item a {
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start; }
-    .Top__Item--Campaign {
-      background-image: url("../img/campaign_visual.jpg");
-      color: #fff; }
-      @media only screen and (max-width: 480px) {
-        .Top__Item--Campaign {
-          height: 200px; } }
-      .Top__Item--Campaign a {
-        width: 100%;
-        height: 100%;
-        color: #fff;
-        background-color: rgba(0, 0, 0, 0.2);
-        transition: -webkit-filter 0.3s ease;
-        transition: filter 0.3s ease;
-        transition: filter 0.3s ease, -webkit-filter 0.3s ease; }
-        .Top__Item--Campaign a:hover {
-          background-color: rgba(0, 0, 0, 0.5); }
-    .Top__Item--Collection {
-      background-image: url("../img/collection_viisual.jpg");
-      color: #fff; }
-      @media only screen and (max-width: 480px) {
-        .Top__Item--Collection {
-          height: 200px; } }
-      .Top__Item--Collection a {
-        width: 100%;
-        height: 100%;
-        color: #fff;
-        background-color: rgba(0, 0, 0, 0.2); }
-        .Top__Item--Collection a:hover {
-          background-color: rgba(0, 0, 0, 0.5); }
-    .Top__Item--NT {
-      height: calc(100% / 3);
-      background-image: url("../img/topic_visual.jpg");
-      color: #fff; }
-      @media only screen and (max-width: 480px) {
-        .Top__Item--NT {
-          height: 160px; } }
-      .Top__Item--NT a {
-        width: 100%;
-        height: 100%;
-        color: #fff;
-        background-color: rgba(0, 0, 0, 0.2); }
-        .Top__Item--NT a:hover {
-          background-color: rgba(0, 0, 0, 0.5); }
-      .Top__Item--NT h2 {
-        font-weight: 500;
-        letter-spacing: 3px;
-        margin: 0;
-        padding-bottom: 15px; }
-    .Top__Item--Snap {
-      height: calc(100% / 3);
-      background-color: #fff;
-      background-image: url("../img/snap_cover.jpg");
-      color: #444444; }
-      @media only screen and (max-width: 480px) {
-        .Top__Item--Snap {
-          z-index: -1;
-          height: 160px; } }
-      .Top__Item--Snap a {
-        width: 100%;
-        height: 100%;
-        color: #444444; }
-        .Top__Item--Snap a:hover {
-          background-color: rgba(0, 0, 0, 0.5); }
-      .Top__Item--Snap h2 {
-        font-weight: 500;
-        letter-spacing: 3px;
-        margin: 0;
-        padding-bottom: 15px; }
-    .Top__Item--News {
-      height: calc(100% / 6);
-      background-color: #eeeeee; }
-      @media only screen and (max-width: 480px) {
-        .Top__Item--News {
-          height: 120px; } }
-      .Top__Item--News a {
-        width: 100%;
-        height: 100%;
-        color: #444444; }
-      .Top__Item--News p {
-        font-size: 13px; }
-    .Top__Item--WS {
-      height: calc(100% / 6);
-      background-color: #444444;
-      color: #fff; }
-      @media only screen and (max-width: 480px) {
-        .Top__Item--WS {
-          height: 120px; } }
-      .Top__Item--WS a {
-        width: 100%;
-        height: 100%;
-        color: #fff; }
-      .Top__Item--WS p {
-        font-size: 13px; }
-    .Top__Item--Title {
-      font-size: 17px;
-      font-weight: 500;
-      letter-spacing: 1.5px;
-      margin: 0;
-      padding-bottom: 15px; }
-    .Top__Item--Line {
-      border-top: 1px solid;
-      width: 200px;
-      margin: 15px 0; }
-  .Top p {
-    margin: 0; }
 
 .Footer {
   height: 45px;
