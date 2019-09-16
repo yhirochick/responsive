@@ -29,7 +29,6 @@ img {
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between; }
     @media only screen and (max-width: 480px) {
       .Global__Header {
@@ -190,6 +189,110 @@ img {
   .SnsIcon a {
     color: #fff; }
 
+.BreakingBad {
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/breaking-bad.jpg"); }
+
+.Characters a {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: -webkit-filter 3.0s ease;
+  transition: filter 3.0s ease;
+  transition: filter 3.0s ease, -webkit-filter 3.0s ease;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; }
+  .Characters a:hover {
+    background-color: rgba(0, 0, 0, 0.6); }
+
+.Characters h2 {
+  padding-left: 10vw; }
+  @media only screen and (max-width: 480px) {
+    .Characters h2 {
+      font-size: 18px; } }
+
+.Characters p {
+  padding-left: 10vw; }
+  @media only screen and (max-width: 480px) {
+    .Characters p {
+      font-size: 14px; } }
+
+.Characters__Walt {
+  height: 50vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/walt.jpg");
+  color: #fff; }
+
+.Characters__Jesse {
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/jesse.jpg");
+  color: #fff; }
+
+.Characters__SaulMike {
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex; }
+  @media only screen and (max-width: 480px) {
+    .Characters__SaulMike {
+      width: 100vw;
+      flex-direction: column; } }
+  .Characters__SaulMike__Saul {
+    width: 50%;
+    background-image: url("../img/saul.jpg"); }
+    @media only screen and (max-width: 480px) {
+      .Characters__SaulMike__Saul {
+        width: 100%; } }
+  .Characters__SaulMike__Mike {
+    width: 50%;
+    background-image: url("../img/mike.jpg"); }
+    @media only screen and (max-width: 480px) {
+      .Characters__SaulMike__Mike {
+        width: 100%; } }
+
+.Characters__BadGuy {
+  height: 40vh;
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+  .Characters__BadGuy__Krazy8 {
+    width: calc(100% / 3);
+    background-image: url("../img/krazy8.jpg"); }
+  .Characters__BadGuy__Tuco {
+    width: calc(100% / 3);
+    background-image: url("../img/tuco.jpg"); }
+  .Characters__BadGuy__Hector {
+    width: calc(100% / 3);
+    background-image: url("../img/hector.jpg"); }
+
+.Characters__BerryBadGuy {
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex; }
+  .Characters__BerryBadGuy__Gus {
+    width: 50%;
+    background-image: url("../img/gus.jpg"); }
+  .Characters__BerryBadGuy__Don {
+    width: 50%;
+    background-image: url("../img/don.jpg"); }
+
 .Top {
   height: 100vh;
   display: flex; }
@@ -200,7 +303,7 @@ img {
       flex-direction: column;
       padding-top: 50px; } }
   .Top__Left {
-    width: 60%; }
+    width: 100%; }
     @media only screen and (max-width: 480px) {
       .Top__Left {
         width: 100%; } }
@@ -223,12 +326,12 @@ img {
       .Top__Item {
         width: 100%; } }
     .Top__Item h2 {
-      padding-left: 40px; }
+      padding-left: 10vw; }
       @media only screen and (max-width: 480px) {
         .Top__Item h2 {
           font-size: 18px; } }
     .Top__Item p {
-      padding-left: 40px; }
+      padding-left: 10vw; }
       @media only screen and (max-width: 480px) {
         .Top__Item p {
           font-size: 14px; } }
